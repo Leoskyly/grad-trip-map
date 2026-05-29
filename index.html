@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>毕业旅行 · 杭电→海盐→苏州→上海 5天自驾</title>
-<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州voco观前街+上海佘山度假">
+<title>毕业旅行 · 杭电→海盐→苏州→上海→诸暨 6天自驾</title>
+<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州voco观前街+上海佘山度假+诸暨五泄">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -451,7 +451,61 @@ const DAYS = [
         name: '回到杭电生活区东门', lat: 30.3151, lng: 120.3549,
         type: 'transport', time: '15:00',
         desc: '开车约2.5h，回到杭电生活区东门',
-        detail: '佘山→杭州约2.5h\n全程高速，路况好\n毕业旅行结束！',
+        detail: '佘山→杭州约2.5h\n全程高速，路况好\n休整一晚，明天出发去诸暨！',
+        gmap: '杭州电子科技大学生活区东门'
+      }
+    ]
+  },
+  {
+    id: 6, label: 'D6', date: '6/11 周四', title: '杭州 → 诸暨',
+    color: '#ff3b30', locations: [
+      {
+        name: '杭电生活区东门出发', lat: 30.3151, lng: 120.3549,
+        type: 'transport', time: '09:00',
+        desc: '杭州出发，开车1.5h到诸暨',
+        detail: '最后一天当天往返\n杭州→诸暨约1.5h',
+        gmap: '杭州电子科技大学生活区东门'
+      },
+      {
+        name: '五泄风景区', lat: 29.7150, lng: 120.1800,
+        type: 'spot', time: '11:00',
+        desc: '诸暨核心景点，五道瀑布徒步',
+        budget: '¥80/人',
+        detail: '地址：诸暨市五泄镇\n\n诸暨最值得去的地方，五道瀑布依次而上\n核心路线：第五泄→第四泄→第三泄（最壮观）\n全程徒步约3-4小时\n6月水量充沛，瀑布好看',
+        gmap: '诸暨五泄风景区',
+        xhsKeyword: '诸暨五泄 瀑布 徒步'
+      },
+      {
+        name: '次坞打面', lat: 29.7200, lng: 120.2450,
+        type: 'food', time: '13:00',
+        desc: '诸暨最有名的本地面食，手工打制筋道十足',
+        budget: '¥20-30/人',
+        detail: '次坞打面是诸暨特色，手工反复敲打面团\n口感比普通面条筋道很多\n推荐：三鲜面、大排面\n五泄下山后在附近镇上找一家就行',
+        gmap: '次坞打面 诸暨',
+        dianpingKeyword: '次坞打面 诸暨'
+      },
+      {
+        name: '西施故里', lat: 29.7100, lng: 120.2350,
+        type: 'spot', time: '15:30',
+        desc: '西施的故乡，不感兴趣可跳过',
+        budget: '¥60/人',
+        detail: '地址：诸暨市苎萝东路2号\n\n西施故里景区，有西施殿、范蠡祠等\n人文景点，可去可不去\n替代：去山下湖珍珠市场逛逛',
+        gmap: '西施故里 诸暨',
+        xhsKeyword: '西施故里 诸暨'
+      },
+      {
+        name: '山下湖珍珠市场', lat: 29.8080, lng: 120.3600,
+        type: 'spot', time: '—',
+        desc: '备选：世界最大淡水珍珠集散地',
+        detail: '地址：诸暨市山下湖镇\n\n世界最大的淡水珍珠交易市场\n不买也开开眼界',
+        gmap: '山下湖珍珠市场 诸暨',
+        xhsKeyword: '山下湖珍珠市场 诸暨'
+      },
+      {
+        name: '返回杭电生活区东门', lat: 30.3151, lng: 120.3549,
+        type: 'transport', time: '18:00',
+        desc: '开车1.5h回杭州，到家',
+        detail: '诸暨→杭州约1.5h\n当天往返，不赶时间\n毕业旅行正式结束！',
         gmap: '杭州电子科技大学生活区东门'
       }
     ]
@@ -464,7 +518,7 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>毕业旅行 · 环太湖自驾</h1><p class="subtitle">4男生 · 6/6—6/10 · 杭电东门→海盐→苏州→上海</p></div>
+<div class="hero"><h1>毕业旅行 · 环太湖+诸暨</h1><p class="subtitle">4男生 · 6/6—6/11 · 杭电→海盐→苏州→上海→诸暨</p></div>
 <div class="info-grid">
   <div class="info-card"><div class="label">酒店</div><div class="value">voco 观前街 + 佘山茂御<br><span style="font-size:12px;color:var(--text-secondary)">IHG+万豪 度假组合</span></div></div>
   <div class="info-card"><div class="label">交通</div><div class="value">全程自驾<br><span style="font-size:12px;color:var(--text-secondary)">多人轮换驾驶</span></div></div>
