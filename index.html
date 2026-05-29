@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>毕业旅行 · 杭州→海盐→苏州→上海 5天自驾</title>
-<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州太湖+上海佘山度假">
+<title>毕业旅行 · 杭电→海盐→苏州→上海 5天自驾</title>
+<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州voco观前街+上海佘山度假">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -215,7 +215,7 @@ a:hover { text-decoration: underline; }
 // ║  TRIP DATA - 毕业旅行 5天自驾                                  ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: '苏州太湖万豪酒店', lat: 31.0793, lng: 120.4200 };
+const HOTEL = { name: 'voco 苏州观前街', lat: 31.3060, lng: 120.6230 };
 
 const DAYS = [
   {
@@ -239,31 +239,21 @@ const DAYS = [
         gmap: '海盐 餐厅'
       },
       {
-        name: '苏州太湖万豪酒店', lat: 31.0793, lng: 120.4200,
+        name: 'voco 苏州观前街', lat: 31.3060, lng: 120.6230,
         type: 'hotel', time: '16:30',
-        desc: '入住太湖边5星度假酒店，湖景泳池高尔夫',
-        budget: '¥600-700/间/晚',
-        detail: '苏州太湖万豪酒店\n地址：苏州市吴中区墅里路6号\n\n设施：室内外泳池、SPA、高尔夫练习场、健身房\n房型建议：山景/湖景双床房\n万豪会员记得累积房晚',
-        gmap: '苏州太湖万豪酒店'
+        desc: '入住观前街核心地段 IHG 酒店，步行到平江路5分钟',
+        budget: '¥500-700/间/晚',
+        detail: 'voco 苏州观前街（IHG 旗下）\n地址：姑苏区观前街核心位置\n\nIHG 白金卡记得绑定，享房型升级/延迟退房等权益\n楼下就是观前街，到平江路步行5分钟\n到苏博/拙政园打车10分钟',
+        gmap: 'voco 苏州观前街酒店',
+        xhsKeyword: 'voco苏州观前街'
       },
       {
-        name: '长满园农家乐', lat: 31.1827, lng: 120.4000,
+        name: '观前街小吃 / 苏帮菜', lat: 31.3070, lng: 120.6240,
         type: 'food', time: '18:30',
-        desc: '太湖边的地道农家菜，银鱼炒蛋人气最高',
-        budget: '¥84/人',
-        detail: '地址：吴中区长沙路（过第一座太湖大桥左手边第三家）\n电话：13913166412\n\n招牌：银鱼炒蛋、太湖白鱼、盐水白虾、农家酱方肉\n祖传老宅改造，节假日爆满，建议提前电话订位',
-        gmap: '苏州太湖 长满园农家乐',
-        xhsKeyword: '苏州太湖长满园农家乐',
-        dianpingKeyword: '长满园农家乐 苏州太湖'
-      },
-      {
-        name: '美味渔家蟹园', lat: 30.88, lng: 120.35,
-        type: 'food', time: '—',
-        desc: '备选：自有养殖基地，太湖三白+大闸蟹',
-        budget: '¥106/人',
-        detail: '地址：太湖西山缥缈峰公路白塔湾桥桥堍\n电话：13771898535\n\n招牌：太湖大闸蟹、太湖三白、山味土鸡汤\n自带养殖基地，大闸蟹从源头保证鲜活',
-        gmap: '美味渔家蟹园 苏州太湖',
-        dianpingKeyword: '美味渔家蟹园 苏州太湖'
+        desc: '入住后在观前街解决晚饭，逛吃逛吃',
+        detail: '观前街是苏州最热闹的商业街\n小吃：采芝斋糕点、陆稿荐酱鸭、黄天源糕团\n或者附近找家苏帮菜馆\nvoco 本身也有不错的餐厅',
+        gmap: '观前街 苏州',
+        xhsKeyword: '观前街 苏州 美食'
       }
     ]
   },
@@ -338,11 +328,11 @@ const DAYS = [
     id: 3, label: 'D3', date: '6/8 周一', title: '苏州 → 上海佘山',
     color: '#ff9500', locations: [
       {
-        name: '自然醒 + 酒店度假', lat: 31.0793, lng: 120.4200,
+        name: '自然醒 + voco周边逛逛', lat: 31.3060, lng: 120.6230,
         type: 'hotel', time: '09:00',
-        desc: '睡到自然醒，享受酒店泳池/太湖风光',
-        detail: '周一景点多闭馆（苏博本馆、拙政园）\n正好享受一上午酒店度假\n泳池、SPA、太湖边散步\n12:00退房',
-        gmap: '苏州太湖万豪'
+        desc: '睡到自然醒，退房前逛逛观前街或平江路',
+        detail: '周一景点多闭馆（苏博本馆、拙政园）\n可以去苏博西馆（免预约，周一开）\n或者就在观前街/平江路悠闲逛逛\n12:00退房',
+        gmap: 'voco 苏州观前街'
       },
       {
         name: '苏州午饭', lat: 31.3000, lng: 120.6000,
@@ -474,9 +464,9 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>毕业旅行 · 环太湖自驾</h1><p class="subtitle">4男生 · 6/6—6/10 · 杭州→海盐→苏州→上海</p></div>
+<div class="hero"><h1>毕业旅行 · 环太湖自驾</h1><p class="subtitle">4男生 · 6/6—6/10 · 杭电东门→海盐→苏州→上海</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">酒店</div><div class="value">太湖万豪 + 佘山茂御<br><span style="font-size:12px;color:var(--text-secondary)">万豪系度假酒店</span></div></div>
+  <div class="info-card"><div class="label">酒店</div><div class="value">voco 观前街 + 佘山茂御<br><span style="font-size:12px;color:var(--text-secondary)">IHG+万豪 度假组合</span></div></div>
   <div class="info-card"><div class="label">交通</div><div class="value">全程自驾<br><span style="font-size:12px;color:var(--text-secondary)">多人轮换驾驶</span></div></div>
   <div class="info-card"><div class="label">预算</div><div class="value">酒店约¥5,000<br><span style="font-size:12px;color:var(--text-secondary)">2间×4晚 + 餐费另计</span></div></div>
   <div class="info-card"><div class="label">风格</div><div class="value">度假感 · 不赶路<br><span style="font-size:12px;color:var(--text-secondary)">园林+太湖+佘山</span></div></div>
@@ -490,7 +480,7 @@ function overviewContent() {
 </div>
 <div class="pay-summary">
   <h4>📅 酒店预订 — 建议尽早</h4>
-  <p>苏州太湖万豪（万豪APP）+ 上海佘山茂御（万豪APP）<br>6月初端午后淡季，房价会比较友好。</p>
+  <p>voco 观前街（IHG APP）+ 佘山茂御（万豪APP）<br>voco 位置极好，步行到平江路5分钟。</p>
 </div>
 <div class="section-head">吃饭速览</div>
 <div class="pay-summary">
