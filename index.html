@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>毕业旅行 · 杭电→海盐→苏州→上海→诸暨 6天自驾</title>
-<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州voco观前街+上海佘山度假+诸暨五泄">
+<title>毕业旅行 · 杭电→海盐→苏州→迪士尼→诸暨 6天自驾</title>
+<meta name="description" content="4男生毕业旅行，杭州出发自驾环线，苏州voco观前街+上海迪士尼+诸暨">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -215,7 +215,7 @@ a:hover { text-decoration: underline; }
 // ║  TRIP DATA - 毕业旅行 5天自驾                                  ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: 'voco 苏州观前街', lat: 31.3060, lng: 120.6230 };
+const HOTEL = { name: '浦东川沙智选假日', lat: 31.1550, lng: 121.6900 };
 
 const DAYS = [
   {
@@ -325,7 +325,7 @@ const DAYS = [
     ]
   },
   {
-    id: 3, label: 'D3', date: '6/8 周一', title: '苏州 → 上海佘山',
+    id: 3, label: 'D3', date: '6/8 周一', title: '苏州 → 上海迪士尼周边',
     color: '#ff9500', locations: [
       {
         name: '自然醒 + voco周边逛逛', lat: 31.3060, lng: 120.6230,
@@ -337,115 +337,67 @@ const DAYS = [
       {
         name: '苏州午饭', lat: 31.3000, lng: 120.6000,
         type: 'food', time: '12:30',
-        desc: '退房后市区找吃的，然后出发去佘山',
-        detail: '推荐：同得兴枫镇大肉面 or 找家苏帮菜馆\n午饭后开车去佘山，约1.5h',
+        desc: '退房后市区找吃的，然后开车去浦东川沙',
+        detail: '推荐：同得兴枫镇大肉面 or 找家苏帮菜馆\n午饭后开车去川沙，约2h',
         gmap: '苏州 餐厅'
       },
       {
-        name: '佘山茂御臻品之选', lat: 31.0930, lng: 121.2080,
+        name: '浦东川沙智选假日', lat: 31.1550, lng: 121.6900,
         type: 'hotel', time: '15:30',
-        desc: '入住森林湖畔度假酒店，55㎡法式大房',
-        budget: '¥500-700/间/晚',
-        detail: '前身是佘山世茂艾美，2025年焕新为茂御臻品之选\n万豪Tribute Portfolio品牌\n\n地址：松江区林荫新路1288号\n55㎡起跳的超大房间\n森林+月湖景观，度假感拉满',
-        gmap: '佘山茂御臻品之选酒店',
-        xhsKeyword: '佘山茂御臻品之选 度假'
+        desc: '入住IHG旗下酒店，免费迪士尼班车',
+        budget: '¥400-500/间/晚',
+        detail: 'Holiday Inn Express 浦东川沙（IHG旗下）\n地址：浦东新区川沙镇界龙大道266号\n\nIHG白金卡记得绑定\n免费迪士尼接送班车（早晚各一班，需预约）\n免费停车场、含早餐\n迪士尼约10分钟车程',
+        gmap: '浦东川沙智选假日酒店',
+        xhsKeyword: '浦东川沙智选假日 迪士尼'
       },
       {
-        name: '农家菜老大（松江店）', lat: 31.0550, lng: 121.2200,
-        type: 'food', time: '18:30',
-        desc: '连续三年必吃榜，稻草扎肉绝了',
-        budget: '¥106/人',
-        detail: '地址：松江区沪松公路6351号\n\n连续三年必吃榜上榜！\n招牌：稻草扎肉（配荷叶饼）、水库鱼头、老鸭煲汤\n明档厨房，江南木质装修\n工作日人少点，但还是建议早到',
-        gmap: '农家菜老大 松江店',
-        dianpingKeyword: '农家菜老大 松江',
-        xhsKeyword: '农家菜老大 上海松江'
-      },
-      {
-        name: '雄华饭店', lat: 31.0050, lng: 121.2270,
-        type: 'food', time: '—',
-        desc: '备选：松江老饕私藏，白切大肠+田螺塞肉',
-        budget: '¥80/人',
-        detail: '地址：松江老城区域（本地人带路才找得到）\n\n"北雄华"之名流传于松江老饕中\n招牌：白切大肠、白切鸡、田螺塞肉、椒盐排条\n地道松江本帮风味',
-        gmap: '雄华饭店 松江',
-        dianpingKeyword: '雄华饭店 上海松江'
+        name: '迪士尼小镇', lat: 31.1440, lng: 121.6580,
+        type: 'food', time: '18:00',
+        desc: '迪士尼小镇吃晚饭，不用买票就能逛',
+        detail: '迪士尼小镇在乐园外面，免费进入\n各种餐厅、商店，先踩个点\n第二天大清早就冲进乐园',
+        gmap: '迪士尼小镇 上海',
+        xhsKeyword: '迪士尼小镇 餐厅 攻略',
+        dianpingKeyword: '迪士尼小镇 餐厅'
       }
     ]
   },
   {
-    id: 4, label: 'D4', date: '6/9 周二', title: '佘山 Staycation',
+    id: 4, label: 'D4', date: '6/9 周二', title: '迪士尼全天',
     color: '#af52de', locations: [
       {
-        name: '佘山国家森林公园', lat: 31.1050, lng: 121.1980,
-        type: 'spot', time: '10:00',
-        desc: '上海唯一自然山林，森林氧吧轻徒步',
-        budget: '免费',
-        detail: '地址：松江区外青松公路9258号\n\n东佘山+西佘山\n山顶有天文台和天主教堂\n轻徒步约2小时，难度很低\n免费入园，天然氧吧',
-        gmap: '佘山国家森林公园',
-        xhsKeyword: '佘山森林公园 徒步'
+        name: '上海迪士尼乐园', lat: 31.1440, lng: 121.6570,
+        type: 'spot', time: '全天',
+        desc: '全世界最快乐的地方，周二票价低人少',
+        budget: '¥475-599/人',
+        detail: '地址：浦东新区川沙镇黄赵路310号\n\n周二工作日，人相对少\n建议：早享卡提前入园（+¥149/人）\n必玩：创极速光轮、加勒比海盗、飞越地平线\n晚上看烟花秀（约20:30）\n\n提前下载迪士尼APP看排队时间',
+        gmap: '上海迪士尼乐园',
+        xhsKeyword: '上海迪士尼 攻略 2025',
+        reserve: 'https://www.shanghaidisneyresort.com'
       },
       {
-        name: '竹筷子松江味', lat: 31.0950, lng: 121.1950,
-        type: 'food', time: '12:30',
-        desc: '佘山脚下十多年老牌农家菜，逛完辰山顺路吃',
-        budget: '¥60-80/人',
-        detail: '地址：松江区（辰山植物园门口附近）\n\n扎根松江十几年，本地人聚餐首选\n招牌：稻草扎肉（松林猪肉）、松江笋丁鲜肉烧卖\n离佘山很近，逛完山直接来吃',
-        gmap: '竹筷子松江味',
-        dianpingKeyword: '竹筷子松江味 佘山',
-        xhsKeyword: '竹筷子 佘山 松江美食'
-      },
-      {
-        name: '广富林文化遗址', lat: 31.0600, lng: 121.1950,
-        type: 'spot', time: '14:30',
-        desc: '上海之根，水下博物馆很出片',
-        budget: '¥40/人',
-        detail: '地址：松江区广富林路3260弄\n\n"漂在水上的博物馆"非常出片\n上海历史文化之根\n适合下午闲逛拍照，2-3小时',
-        gmap: '广富林文化遗址',
-        xhsKeyword: '广富林文化遗址 拍照'
-      },
-      {
-        name: '观堂小院（佘山店）', lat: 31.0900, lng: 121.2000,
-        type: 'food', time: '18:30',
-        desc: '徽派建筑古色古香，鱼头泡饭+清蒸土鸡',
-        budget: '¥96/人',
-        detail: '地址：松江区外青松公路8228弄169号\n\n徽派建筑，古色古香的用餐环境\n招牌：本帮红烧肉、鱼头泡饭、清蒸竹林土鸡、梅干菜饼\n免费停车，适合毕业旅行最后一顿正经饭',
-        gmap: '观堂小院 佘山',
-        dianpingKeyword: '观堂小院 佘山',
-        xhsKeyword: '观堂小院 上海佘山'
-      },
-      {
-        name: '森林家人', lat: 31.1060, lng: 121.1950,
+        name: '迪士尼园内餐厅', lat: 31.1440, lng: 121.6560,
         type: 'food', time: '—',
-        desc: '备选：佘山森林公园里的本帮菜，吃在景里',
-        budget: '¥100/人',
-        detail: '地址：佘山森林公园东园（森林宾馆旁）\n\n"吃在景里"，天然氧吧中品尝本帮菜\n招牌：一品蒸蟹膏、本帮红烧肉、腌笃鲜\n每日凌晨渔港直送活鲜',
-        gmap: '森林家人 佘山',
-        dianpingKeyword: '森林家人 上海佘山'
-      },
-      {
-        name: '月湖雕塑公园', lat: 31.1000, lng: 121.2100,
-        type: 'spot', time: '—',
-        desc: '备选：酒店旁边，月湖边散步发呆',
-        detail: '就在佘山茂御酒店旁边\n月湖边散步，看雕塑\n如果想更懒一点，直接酒店泳池躺平',
-        gmap: '月湖雕塑公园 佘山'
+        desc: '园内解决，火鸡腿+米奇冰淇淋',
+        budget: '¥80-150/人',
+        detail: '园内推荐：巴波萨烧烤（加勒比海盗旁）、星露台餐厅（漫威主题）\n网红：火鸡腿（¥80）、米奇头冰淇淋\n也可以出去到迪士尼小镇吃，保留门票可返园',
+        gmap: '上海迪士尼 美食'
       }
     ]
-  },
-  {
-    id: 5, label: 'D5', date: '6/10 周三', title: '上海 → 杭州',
+  }    id: 5, label: 'D5', date: '6/10 周三', title: '上海 → 杭州',
     color: '#86868b', locations: [
       {
-        name: '自然醒 + 酒店最后享受', lat: 31.0930, lng: 121.2080,
+        name: '自然醒 + 酒店早餐', lat: 31.1550, lng: 121.6900,
         type: 'hotel', time: '10:00',
         desc: '睡到自然醒，最后泡一泡酒店',
         detail: '最后一天不赶路\n酒店早餐、湖边走走、拍个合影\n12:00退房',
-        gmap: '佘山茂御臻品之选'
+        gmap: '浦东川沙智选假日'
       },
       {
-        name: '午饭', lat: 31.0900, lng: 121.2000,
+        name: '午饭', lat: 31.1550, lng: 121.6900,
         type: 'food', time: '12:00',
-        desc: '佘山周边吃完午饭，开车回杭州',
-        detail: '退房后在佘山/松江附近随便吃个午饭\n推荐：竹筷子 or 路边面馆快速解决\n饭后直接上高速回杭州',
-        gmap: '松江 餐厅'
+        desc: '川沙周边吃完午饭，开车回杭州',
+        detail: '退房后在川沙附近吃个午饭\n推荐：上海本帮小馆 or 快餐\n饭后直接上高速回杭州',
+        gmap: '川沙 餐厅'
       },
       {
         name: '回到杭电生活区东门', lat: 30.3151, lng: 120.3549,
@@ -478,9 +430,9 @@ function overviewContent() {
   return `
 <div class="hero"><h1>毕业旅行 · 环太湖+诸暨</h1><p class="subtitle">4男生 · 6/6—6/11 · 杭电→海盐→苏州→上海→诸暨</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">酒店</div><div class="value">voco 观前街 + 佘山茂御<br><span style="font-size:12px;color:var(--text-secondary)">IHG+万豪 度假组合</span></div></div>
+  <div class="info-card"><div class="label">酒店</div><div class="value">voco 观前街 + 川沙智选假日<br><span style="font-size:12px;color:var(--text-secondary)">IHG双酒店 度假组合</span></div></div>
   <div class="info-card"><div class="label">交通</div><div class="value">全程自驾<br><span style="font-size:12px;color:var(--text-secondary)">多人轮换驾驶</span></div></div>
-  <div class="info-card"><div class="label">预算</div><div class="value">酒店约¥5,000<br><span style="font-size:12px;color:var(--text-secondary)">2间×4晚 + 餐费另计</span></div></div>
+  <div class="info-card"><div class="label">预算</div><div class="value">酒店约¥3,600-4,400<br><span style="font-size:12px;color:var(--text-secondary)">2间×4晚 + 餐费另计</span></div></div>
   <div class="info-card"><div class="label">风格</div><div class="value">度假感 · 不赶路<br><span style="font-size:12px;color:var(--text-secondary)">园林+太湖+佘山</span></div></div>
 </div>
 <div class="section-head">行程概览</div>
@@ -492,7 +444,7 @@ function overviewContent() {
 </div>
 <div class="pay-summary">
   <h4>📅 酒店预订 — 建议尽早</h4>
-  <p>voco 观前街（IHG APP）+ 佘山茂御（万豪APP）<br>voco 位置极好，步行到平江路5分钟。</p>
+  <p>voco 观前街 + 川沙智选假日（均为IHG APP）<br>voco 步行到平江路5分钟，川沙智选免费迪士尼班车</p>
 </div>
 <div class="section-head">吃饭速览</div>
 <div class="pay-summary">
